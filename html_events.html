@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>This is from HTML</h1>
+
+    <p id="my_paragraph">welcome to america</p>
+
+    <button onclick="changeStyle()">Click Me</button>
+    
+    <hr>
+    <p>This button counts when you click me</p>
+    <button onclick="addCounter()"id=counter_button>0</button>
+    <hr>
+
+    <input id="my_input"> 
+    <button id="input_button">Click Me</button>
+
+    <hr>
+
+    <p>Please Enter password</p>
+    <input id="my_secret"> 
+    <button id="secret_button">submit</button>
+
+    <hr>
+
+
+    <script lang="js">
+        console.log("Hello World")
+
+        document.write ("<h1>This is from JavaScript</h1>")
+        document.write("Welcome to my JavaScript Website")
+
+
+        function changeStyle () {
+        let myParagraph = document.getElementById("my_paragraph")
+
+        myParagraph.innerHTML = 'This was modified by JavaScript'
+
+        myParagraph.style = 'background: red; color: cyan'
+        alert("You clicked a button")
+        }
+
+        let counter = 0
+
+        function addCounter () {
+             counter = counter + 1
+             let counterButton = document.getElementById("counter_button")
+             counterButton.innerHTML = counter
+        }
+
+        function inputButton () {
+            let myInput = document.getElementById
+
+            console.log(myInput.value)
+
+        }
+
+        function secretButton () {
+            let mySecret = document.getElementById("my_secret")
+            console.log(mySecret.value)
+            if (mySecret.value == "abc123"){
+                window.location = "https://youtube.com"
+            }
+            else {
+                document.write("try again")
+            }
+        }
+
+           
+
+
+        
+         
+      
+    </script>
+</body>
+</html>
