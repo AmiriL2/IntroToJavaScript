@@ -8,9 +8,12 @@ let digits = document.getElementById("digits")
 
 let interval;
 
+lapseButton.disabled = false
+
 function start () {
 
     startButton.disabled = true
+    lapseButton.disabled = false
 
     interval = setInterval(function () {
         milliseconds = milliseconds + 10
@@ -32,12 +35,17 @@ function start () {
 function stop () {
 
     startButton.disabled = false
+    lapseButton.disabled = true
+
     digits.innerHTML = String(minutes).padStart(2,"0") + ":" + String(seconds).padStart(2, "0") + ":" + milliseconds/10
 
     clearInterval(interval)
 }
 
 function reset () {
+
+    lapseButton.disabled = false
+
     clearInterval(interval)
     milliseconds = 0
     seconds = 0
